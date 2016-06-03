@@ -10,3 +10,34 @@ The staging area is a container that you can fill with all the things from the w
 
 
 
+How can you use the staging area to make sure you have one commit per logical change?
+
+You can use git diff or after adding a file to the staging area, git diff --staged, to compare the updates you are planning on making with the most recent previous commit.
+
+
+
+What are some situations when branches would be helpful in keeping your history organized?  How would branches help?
+
+Branches are useful when you want to make a larger set of changes than just a single quick change, particularly when you know ahead of time that those changes are not something that you want representing your actual project without further review.
+
+
+
+How do the diagrams help you visualize the branch structure?
+
+They help you to see clearly each branches relationship to each other, in particular which commits are shared and which are unique along each individual branch.  They also make it easier to identify unreachable commits as you make them and thus the need for new branches to keep those changes.
+
+
+
+What is the result of merging two branches together?  Why do we represent it in the diagram the way we do?
+
+We represent it in the diagram as two branches meeting together because the merge is actually taking all the common changes along with all the unique changes of both branches.  If a commit adds a new line of code in one of the branches it will be in the merged commit, and if a preexisting line is deleted in a branch it will not be present in the merged commit.
+
+
+
+What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+
+Automatic merging allows for maximum efficiency when combing code, with the only drawback of infrequently ending up with results that you actually don't want.  This can happen when a line of code is deleted that after collaboration you would have agreed to leave in there, but don't see because it was removed automatically.
+
+
+
+
